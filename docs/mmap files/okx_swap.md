@@ -1,7 +1,7 @@
 # Okx Swap Data
 
 ## Summary
-- Use a [memory mappable](https://numpy.org/doc/stable/reference/generated/numpy.memmap.html) format. 
+- Use a [memory mappable](https://numpy.org/doc/stable/reference/generated/numpy.memmap.html) format. 
 - All data are stored as `double` precison floating number aka `np.float64`
 - Follow the /okx/swap/\<*instrument*\>/\<*first_timestamp_ms*\>.mm file pattern
 - Use the matrix 2d shape `(-1, 16)` (-1 means one can compute this dim according to file size as numpy would do)
@@ -28,7 +28,7 @@
 | 15 | LastPrice | raw last price |
 
 
-## Notes  
+## Notes  
 
 - use ask-bid midpoint `(bid + ask) / 2` when revelent as last price instead of last traded price
 - the `OpenInterest` is transformed to take into account the `ctVal` of a given instrument

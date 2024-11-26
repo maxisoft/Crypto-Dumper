@@ -41,7 +41,7 @@ jobs:
 
       - name: Upload Code Coverage to Coveralls
         if: success() && ${{ matrix.os }} == "ubuntu-latest"
-        uses: coverallsapp/github-action@v1.2.4
+        uses: coverallsapp/github-action@v2.3.0
         with:
           github-token: ${{secrets.GITHUB_TOKEN }} 
           path-to-lcov: Cryptodd.Tests/TestResults/coverage.info
